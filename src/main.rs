@@ -147,22 +147,20 @@ fn project(vertex: &Vec3) -> (f32, f32) {
     let z_calc = vertex.z + 5.0;
 
     let u = vertex.x / z_calc;
-    let v = vertex.y / z_calc;
+    let v = (vertex.y / z_calc) * 0.5;
     (u, v)
 }
 
 
 // convert two dimensional vertices into terminal coordinates
 fn convert(mut x: f32, mut y: f32) -> Result<(usize, usize), String> {
-    x *= 40.0;
-    y *= 40.0;
+    x *= 80.0;
+    y *= 80.0;
 
     let (width, height) = terminal::size().unwrap_or((80, 24));
 
     x += (width as f32) / 2.0;
     y += (height as f32) / 2.0;
-
-    // x *= 2.0;
 
     if x < width as f32 && y < height as f32 && x > 0.0 && y > 0.0 {
         return Ok((x as usize, y as usize));
