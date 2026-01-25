@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("spinning-cube-cs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c6c6021d78a2968b0fa0721356561f32bdd4d50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9880447c36dbfca331164bd0518868442a40589f")]
 [assembly: System.Reflection.AssemblyProductAttribute("spinning-cube-cs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("spinning-cube-cs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

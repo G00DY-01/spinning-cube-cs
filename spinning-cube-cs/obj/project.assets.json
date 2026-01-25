@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\New\\Desktop\\All Code\\3D Rendering\\spinning-cube-cs-1\\spinning-cube-cs\\spinning-cube-cs.csproj",
+      "projectUniqueName": "C:\\Users\\New\\Desktop\\All Code\\3D Rendering\\spinning-cube-cs\\spinning-cube-cs.csproj",
       "projectName": "spinning-cube-cs",
-      "projectPath": "C:\\Users\\New\\Desktop\\All Code\\3D Rendering\\spinning-cube-cs-1\\spinning-cube-cs\\spinning-cube-cs.csproj",
+      "projectPath": "C:\\Users\\New\\Desktop\\All Code\\3D Rendering\\spinning-cube-cs\\spinning-cube-cs.csproj",
       "packagesPath": "C:\\Users\\New\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\New\\Desktop\\All Code\\3D Rendering\\spinning-cube-cs-1\\spinning-cube-cs\\obj\\",
+      "outputPath": "C:\\Users\\New\\Desktop\\All Code\\3D Rendering\\spinning-cube-cs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\New\\AppData\\Roaming\\NuGet\\NuGet.Config"
