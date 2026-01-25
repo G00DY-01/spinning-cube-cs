@@ -1,0 +1,15 @@
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\bin\Debug\net10.0\spinning-cube-cs.exe
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\bin\Debug\net10.0\spinning-cube-cs.deps.json
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\bin\Debug\net10.0\spinning-cube-cs.runtimeconfig.json
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\bin\Debug\net10.0\spinning-cube-cs.dll
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\bin\Debug\net10.0\spinning-cube-cs.pdb
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.AssemblyInfoInputs.cache
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.AssemblyInfo.cs
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.csproj.CoreCompileInputs.cache
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.sourcelink.json
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.dll
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\refint\spinning-cube-cs.dll
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.pdb
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\spinning-cube-cs.genruntimeconfig.cache
+C:\Users\New\Desktop\All Code\3D Rendering\spinning-cube-cs-1\spinning-cube-cs\obj\Debug\net10.0\ref\spinning-cube-cs.dll

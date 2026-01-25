@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Threading;
 
-struct Vec3
+
+public struct Vec3
 {
     public float x, y, z;
 
@@ -15,33 +17,53 @@ struct Vec3
     }
 }
 
-class Program
+public class CubeRenderer
 {
-    static void Main()
+    public static void Start(float size, List<Vec3> cubespos)
     {
         Console.CursorVisible = false;
-
-        var verts = new List<Vec3>
+        List<Vec3> verts = new List<Vec3>();
+        for (int i = 0; i < cubespos.Count; i++)
         {
-            new Vec3( 1,  1, -1),
-            new Vec3(-1,  1, -1),
-            new Vec3(-1, -1, -1),
-            new Vec3( 1, -1, -1),
-            new Vec3( 1, -1,  1),
-            new Vec3( 1,  1,  1),
-            new Vec3(-1,  1,  1),
-            new Vec3(-1, -1,  1),
-        };
+            var cubevert = new List<Vec3>();
+            cubevert.Add(new Vec3(cubespos[i].x+0.5f, cubespos[i].y+0.5f, cubespos[i].z-0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x-0.5f, cubespos[i].y+0.5f, cubespos[i].z-0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x-0.5f, cubespos[i].y-0.5f, cubespos[i].z-0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x+0.5f, cubespos[i].y-0.5f, cubespos[i].z-0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x+0.5f, cubespos[i].y-0.5f, cubespos[i].z+0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x+0.5f, cubespos[i].y+0.5f, cubespos[i].z+0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x-0.5f, cubespos[i].y+0.5f, cubespos[i].z+0.5f));
+            cubevert.Add(new Vec3(cubespos[i].x-0.5f, cubespos[i].y-0.5f, cubespos[i].z+0.5f));
+            for (int j = 0; j < cubevert.Count; j++)
+            {
+                if (!verts.Contains(cubevert[j]))
+                {
+                    verts.Add(cubevert[j]);
+                }
+            }
 
-        var edges = new (int, int)[]
+        } 
+        var edges = new List<(int, int)>();
+        for (int i = 0; i < verts.Count; i++)
         {
-            (0,1),(1,2),(2,3),(3,0),
-            (4,5),(5,6),(6,7),(7,4),
-            (0,5),(1,6),(2,7),(3,4)
-        };
+            for (int j = i+1; j < verts.Count; j++)
+            {
+                var a = verts[i];
+                var b = verts[j];
+
+                float distx = a.x-b.x;
+                float disty = a.y-b.y;
+                float distz = a.z-b.z;
+                float dist = distx*distx + disty*disty + distz*distz;
+                if (dist == 1f)
+                {
+                    edges.Add((i, j));
+                }
+
+            }
+        }
 
         float totalAngle = 0f;
-
         while (true)
         {
             int width = Console.WindowWidth;
@@ -61,7 +83,7 @@ class Program
                 var rz = RotateZ(ry, totalAngle);
                 var (u, v2) = Project(rz);
 
-                if (ConvertToScreen(u, v2, width, height, out int sx, out int sy))
+                if (ConvertToScreen(u, v2, width, height, size, out int sx, out int sy))
                     projectedPoints.Add((sx, sy));
                 else
                     projectedPoints.Add((-1, -1));
@@ -128,10 +150,10 @@ class Program
         return (u, v2);
     }
 
-    static bool ConvertToScreen(float x, float y, int w, int h, out int sx, out int sy)
+    static bool ConvertToScreen(float x, float y, int w, int h, float size, out int sx, out int sy)
     {
-        x *= 80f;
-        y *= 80f;
+        x *= size;
+        y *= size;
 
         x += w / 2f;
         y += h / 2f;
