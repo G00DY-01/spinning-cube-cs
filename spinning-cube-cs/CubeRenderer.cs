@@ -171,14 +171,25 @@ public class CubeRenderer
         int sx = x0 < x1 ? 1 : -1;
         int sy = y0 < y1 ? 1 : -1;
         int err = dx - dy;
-
+        float ang = MathF.Atan2(y1-y0,x1-x0); 
+        ang = ang * 180f / MathF.PI;
+        if (ang < 0) ang += 360f; 
+        char ch;
+        if (((ang >= 0) && (ang <= 22.5)) || (ang > 337.5) && (ang <= 360) || (ang > 157.5) && (ang <= 202.5))
+            ch = '_';
+        else if ((ang > 22.5) && (ang <= 67.5) || (ang > 202.5) && (ang <= 247.5))
+            ch = '\\';
+        else if ((ang > 67.5) && (ang <= 112.5) || (ang > 247.5) && (ang <= 292.5))
+            ch = '|';
+        else
+            ch = '/';
         int w = buffer.GetLength(1);
         int h = buffer.GetLength(0);
 
         while (true)
         {
             if (x0 >= 0 && y0 >= 0 && x0 < w && y0 < h)
-                buffer[y0, x0] = '#';
+                buffer[y0, x0] = ch;
 
             if (x0 == x1 && y0 == y1)
                 break;
