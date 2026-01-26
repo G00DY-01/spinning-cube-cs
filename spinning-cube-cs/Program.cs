@@ -11,7 +11,7 @@ public class Program
     {
         string x = "";
         var positions = new List<Vec3>();
-        while (x != "e")
+        while (x != "s")
         {
             Console.WriteLine("Enter a cube position as x,y,z , type 'e' to exit, or type 's' to start: ");
             x = Console.ReadLine();
