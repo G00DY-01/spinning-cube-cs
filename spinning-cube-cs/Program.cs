@@ -13,11 +13,15 @@ public class Program
         var positions = new List<Vec3>();
         while (x != "e")
         {
-            Console.WriteLine("Enter a cube position as x,y,z or type 'e' to exit: ");
+            Console.WriteLine("Enter a cube position as x,y,z , type 'e' to exit, or type 's' to start: ");
             x = Console.ReadLine();
-            if (x == "e")
+            if (x == "s")
             {
                 break;
+            }
+            if (x == "e")
+            {
+                exit();
             }
             var xyz = x.Split(',');
             if (xyz.Length != 3)
