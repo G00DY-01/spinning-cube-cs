@@ -21,7 +21,7 @@ public class Program
             }
             if (x == "e")
             {
-                exit();
+                Environment.Exit(0);
             }
             var xyz = x.Split(',');
             if (xyz.Length != 3)
